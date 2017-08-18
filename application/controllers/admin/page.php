@@ -250,10 +250,12 @@ class Page extends CI_Controller {
 
         $this->data['message'] = '';
         $this->form_validation->set_error_delimiters("<div style='color:red'>", '</div>');
+        $this->form_validation->set_rules('display_name', 'Display Name', 'xss_clean|required');
         
         if ($this->input->post()) {
             $result = array();
             //if page_id is zero then show an error message. -------------------
+            if ($this->form_validation->run() == true) {
                 $page_id = $this->input->post('page_list');
                 if($page_id == 0)
                 {
@@ -262,7 +264,8 @@ class Page extends CI_Controller {
                     return;
                 }
                 $additional_data = array(
-                    'page_id' => $page_id
+                    'page_id' => $page_id,
+                    'display_name' => $this->input->post('display_name')
                 );
                 if (isset($_FILES["userfile"])) {
                     $file_info = $_FILES["userfile"];
@@ -275,6 +278,11 @@ class Page extends CI_Controller {
                 } else {
                     $result['message'] = 'Error while adding page file. Please try again later.';
                 }
+            }
+            else 
+            {
+                $result['message'] = validation_errors();
+            }
             echo json_encode($result);
             return;
         }
@@ -285,9 +293,9 @@ class Page extends CI_Controller {
             $page_list[$page_info['id']] = $page_info['title'];
         }
         $this->data['page_list'] = $page_list;
-        $this->data['title'] = array(
-            'id' => 'title',
-            'name' => 'title',
+        $this->data['display_name'] = array(
+            'id' => 'display_name',
+            'name' => 'display_name',
             'type' => 'text',
         );
         $this->data['description'] = array(

@@ -47,44 +47,38 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse main-menu-collapse" id="main-menu">
                 <ul class="nav navbar-nav nav-custom">
-                    <li class="active"><a href=""><span class="glyphicon glyphicon-home"></span></a></li>
-                    <li id="product-service" class="">
-                        <a href="">Products & Services <span class="indicator glyphicon glyphicon-chevron-down"></span></a>
-                        <ul class="dropdown-menu-custom">
-                            <li><a href="">Spinning</a></li>
-                            <li><a href="">Knitting</a></li>
-                            <li><a href="">Dyeing and Washing</a></li>
-                            <li><a href="">Printing</a></li>
-                            <li><a href="">Apparels</a></li>
-                            <li><a href="">Packaging</a></li>
-                            <li><a href="">Distribution</a></li>
-                            <li><a href="">Ceramics</a></li>
-                            <li><a href="">ICT & Telecommunications</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">Concerns</a></li>
-                    <li><a href="">Sustainability</a></li>
-                    <li><a href="">Development Partners</a></li>
-                    <li class="">
-                        <a href="">Career  <span class="indicator glyphicon glyphicon-chevron-down"></span></a>
-                        <ul class="dropdown-menu-custom">
-                            <li><a href="">Career at DBL</a></li>
-                            <li><a href="">Current Vacancies</a></li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <a href="">About Us  <span class="indicator glyphicon glyphicon-chevron-down"></span></a>
-                        <ul class="dropdown-menu-custom">
-                            <li><a href="">About DBL Group</a></li>
-                            <li><a href="">Core Values</a></li>
-                            <li><a href="">Major Buyers</a></li>
-                            <li><a href="">Board of Directors</a></li>
-                            <li><a href="">Export Destinations</a></li>
-                            <li><a href="">Awards and Achievements</a></li>
-                            <li><a href="">Newsletter</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="<?php echo base_url().'user/contact_us'?>">Contact Us</a></li>
+                    <li class="<?php echo ($menu_id == MENU_ID_HOME)?"active":"" ?>"><a href="<?php echo base_url(); ?>"><span class="glyphicon glyphicon-home"></span></a></li>
+                    <?php
+                    foreach($menu_submenu_list as $menu_info)
+                    {
+                        if(count($menu_info['submenu_list']) == 0)
+                        {
+                    ?>        
+                            <li class="<?php echo ($menu_id == $menu_info['menu_id'])?"active":"" ?>"><a href="<?php echo ($menu_info['page_id']== null)?base_url()."#":base_url()."user/page/".$menu_info['page_id']."/".$menu_info['menu_id'] ?>"><?php echo $menu_info['title']?></a></li>
+                    <?php
+                        }
+                        else
+                        {
+                    ?>
+                            <li class="<?php echo ($menu_id == $menu_info['menu_id'])?"active":"" ?>">
+                                <a href="<?php echo ($menu_info['page_id']== null)?base_url()."#":base_url()."user/page/".$menu_info['page_id']."/".$menu_info['menu_id'] ?>"><?php echo $menu_info['title']?><span class="indicator glyphicon glyphicon-chevron-down"></span></a>
+                                <ul class="dropdown-menu-custom">
+                    <?php
+                                foreach($menu_info['submenu_list'] as $submenu_info)
+                                {
+                    ?>
+                                    <li><a href="<?php echo ($submenu_info['page_id']== null)?base_url()."#":base_url()."user/page/".$submenu_info['page_id']."/".$menu_info['menu_id'] ?>"><?php echo $submenu_info['title']?></a></li>
+                    <?php                
+                                }   
+                    ?>                
+                                </ul>
+                            </li>
+                    <?php        
+                        }
+                    }
+                    ?>
+                    
+                    <li class="<?php echo ($menu_id == MENU_ID_CONTACT_US)?"active":"" ?>"><a href="<?php echo base_url().'user/contact_us'?>">Contact Us</a></li>
                 </ul>
             </div>
         </nav>

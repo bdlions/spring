@@ -96,10 +96,10 @@ $(function () {
                         <div class="col-md-12"> <?php echo $message; ?> </div>
                     </div>
                     <div class="form-group">
-                        <label for="page_id" class="col-md-6 control-label requiredField">
+                        <label for="page_id" class="col-md-3 control-label requiredField">
                             Page
                         </label>
-                        <div class ="col-md-6">
+                        <div class ="col-md-9">
                             <?php echo form_dropdown('page_list', array('0'=>'Select')+$page_list, '0', 'class=form-control id=page_list'); ?>
                         </div> 
                     </div>

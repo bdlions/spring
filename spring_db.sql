@@ -203,6 +203,7 @@ CREATE TABLE IF NOT EXISTS `page_files` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `page_id` int(11) NOT NULL,
   `name` varchar(500) NOT NULL,
+  `display_name` varchar(500) DEFAULT '',
   `order` int(11) DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
@@ -220,10 +221,12 @@ CREATE TABLE IF NOT EXISTS `menus` (
 ALTER TABLE `menus`
   ADD CONSTRAINT `fk_menus_pages1` FOREIGN KEY (`page_id`) REFERENCES `pages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 INSERT INTO `menus` (`id`, `title`, `order`) VALUES
-(1, 'ABOUT US', 1),
-(2, 'OUR SERVICES', 2),
-(3, 'COMMERCIAL', 3),
-(4, 'COMPANY INFO', 4);
+(1, 'Products & Services', 1),
+(2, 'Concerns', 2),
+(3, 'Sustainability', 3),
+(4, 'Development Partners', 4),
+(5, 'Career', 5),
+(6, 'About Us', 6);
 
 CREATE TABLE IF NOT EXISTS `submenus` (
   `id` int(11) NOT NULL AUTO_INCREMENT,  
@@ -239,13 +242,24 @@ ALTER TABLE `submenus`
   ADD CONSTRAINT `fk_submenus_menus1` FOREIGN KEY (`menu_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_submenus_pages1` FOREIGN KEY (`page_id`) REFERENCES `pages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 INSERT INTO `submenus` (`id`, `title`,`menu_id`, `order`) VALUES
-(1, 'About Us', 1, 1),
-(2, 'Our Services', 2, 1),
-(3, 'Building Surveys', 2, 2),
-(4, 'Design & Development', 2, 3),
-(5, 'Commercial', 3, 1),
-(6, 'Company Info', 4, 1),
-(7, 'Terms & Conditions', NULL, 1);
+(1, 'Spinning', 1, 1),
+(2, 'Knitting', 1, 2),
+(3, 'Dyeing and Washing', 1, 3),
+(4, 'Printing', 1, 4),
+(5, 'Apparels', 1, 5),
+(6, 'Packaging', 1, 6),
+(7, 'Distribution', 1, 7),
+(8, 'Ceramics', 1, 8),
+(9, 'ICT & Telecommunications', 1, 9),
+(10, 'Career at DBL', 5, 1),
+(11, 'Current Vacancies', 5, 2),
+(12, 'About DBL Group', 6, 1),
+(13, 'Core Values', 6, 2),
+(14, 'Major Buyers', 6, 3),
+(15, 'Board of Directors', 6, 4),
+(16, 'Export Destinations', 6, 5),
+(17, 'Awards and Achievements', 6, 6),
+(18, 'Newsletter', 6, 7);
 
 
 CREATE TABLE IF NOT EXISTS `addresses` (
@@ -265,8 +279,11 @@ INSERT INTO `addresses` (`id`, `title`,`street`, `city`, `post_code`, `telephone
 CREATE TABLE IF NOT EXISTS `feedbacks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(500) NOT NULL,
-  `email` varchar(500) NOT NULL,
+  `company` varchar(500) NOT NULL,
+  `address` varchar(1000) NOT NULL,
   `phone` varchar(500) DEFAULT '',
+  `email` varchar(500) NOT NULL,  
+  `subject` varchar(500) DEFAULT '',
   `enquiry` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;

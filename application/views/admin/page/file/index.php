@@ -17,6 +17,7 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Page Title</th>
+                                    <th>Display Name</th>
                                     <th>File</th>
                                     <th style="text-align: center">Delete</th>
                                 </tr>
@@ -24,6 +25,7 @@
                             <tr>
                                 <td><?php echo $page_file_info['id']; ?></td>
                                 <td><?php echo $page_file_info['title']; ?></td>
+                                <td><?php echo $page_file_info['display_name']; ?></td>
                                 <td>
                                     <a target="_blank" href="<?php echo base_url().FILE_UPLOAD_PATH.$page_file_info['name']?>"><?php echo $page_file_info['name']; ?></a>
                                 </td>

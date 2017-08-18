@@ -53,12 +53,12 @@
                             <?php echo form_input($name + array('class' => 'form-control')); ?>
                         </div>
                     </div>
-                    <div class="row">
+<!--                    <div class="row">
                         <div class="col-md-12">
                             <label>Country:</label>
                         </div>
-                    </div>
-                    <div class="row  form-group">
+                    </div>-->
+<!--                    <div class="row  form-group">
                         <div class="col-md-12">
                             <select name="contact_country" id="contact_country" size="1" title="Country" class="form-control">
                                 <option value="">Select Country....</option>
@@ -305,7 +305,7 @@
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
                         </div>
-                    </div>
+                    </div>-->
                      <div class="row">
                         <div class="col-md-12">
                             <label>Company: </label>
@@ -313,7 +313,7 @@
                     </div>
                     <div class="row  form-group">
                         <div class="col-md-12">
-                            <input id="company" name="company" class="form-control">
+                            <?php echo form_input($company + array('class' => 'form-control')); ?>
                         </div>
                     </div>
                      <div class="row">
@@ -323,7 +323,7 @@
                     </div>
                     <div class="row  form-group">
                         <div class="col-md-12">
-                            <input id="address" name="address" class="form-control">
+                            <?php echo form_input($address + array('class' => 'form-control')); ?>
                         </div>
                     </div>
                      <div class="row">
@@ -353,7 +353,7 @@
                     </div>
                     <div class="row  form-group">
                         <div class="col-md-12">
-                            <?php echo form_input($email + array('class' => 'form-control')); ?>
+                            <?php echo form_input($subject + array('class' => 'form-control')); ?>
                         </div>
                     </div>
                    

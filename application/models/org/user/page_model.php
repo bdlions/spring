@@ -31,6 +31,46 @@ class Page_model extends Ion_auth_model
                 ->get();
     }
     
+    public function get_menu_list()
+    {
+        $this->db->order_by('order', 'asc');
+        return $this->db->select($this->tables['menus'].'.id as menu_id,'.$this->tables['menus'].'.*')
+                ->from($this->tables['menus'])
+                ->get();
+    }
+    
+    public function get_submenu_list()
+    {
+        $this->db->order_by('order', 'asc');
+        return $this->db->select($this->tables['submenus'].'.id as submenu_id,'.$this->tables['submenus'].'.*')
+                ->from($this->tables['submenus'])
+                ->get();
+    }
+    
+    public function get_page_info($page_id)
+    {
+        $this->db->where($this->tables['pages'].'.id', $page_id);
+        return $this->db->select($this->tables['pages'].'.id as page_id,'.$this->tables['pages'].'.*')
+                ->from($this->tables['pages'])
+                ->get();
+    }
+    
+    public function get_page_image_list($page_id)
+    {
+        $this->db->where($this->tables['page_images'].'.page_id', $page_id);
+        return $this->db->select($this->tables['page_images'].'.id as page_image_id,'.$this->tables['page_images'].'.*')
+                ->from($this->tables['page_images'])
+                ->get();
+    }
+    
+    public function get_page_file_list($page_id)
+    {
+        $this->db->where($this->tables['page_files'].'.page_id', $page_id);
+        return $this->db->select($this->tables['page_files'].'.id as page_file_id,'.$this->tables['page_files'].'.*')
+                ->from($this->tables['page_files'])
+                ->get();
+    }
+    
     public function get_all_submenus($menu_id)
     {
         $this->db->where('menu_id', $menu_id);
@@ -40,7 +80,7 @@ class Page_model extends Ion_auth_model
                 ->get();
     }
     
-    public function get_page_info($submenu_id)
+    /*public function get_page_info($submenu_id)
     {
         $this->db->where($this->tables['submenus'].'.id', $submenu_id);
         return $this->db->select($this->tables['menus'].'.id as menu_id,'.$this->tables['submenus'].'.id as submenu_id,'.$this->tables['pages'].'.id as page_id,'.$this->tables['pages'].'.title,'.$this->tables['pages'].'.img,'.$this->tables['pages'].'.description')
@@ -48,7 +88,7 @@ class Page_model extends Ion_auth_model
                 ->join($this->tables['submenus'], $this->tables['pages'] . '.submenu_id=' . $this->tables['submenus'] . '.id', 'left')
                 ->join($this->tables['menus'], $this->tables['submenus'] . '.menu_id=' . $this->tables['menus'] . '.id', 'left')
                 ->get();
-    }
+    }*/
     
     public function create_feedback($additional_data)
     {

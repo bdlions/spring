@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-    <div class="panel-heading">Menu</div>
+    <div class="panel-heading">Enquery</div>
     <div class="panel-body">
         <div class="row col-md-12">            
             <div class="row">
@@ -11,8 +11,7 @@
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Enquire</th>
-                                <th>Show Replies</th>
-                                <th>Reply</th>
+                                <th>Details</th>
                                 <th style="text-align: center">Delete</th>
                             </tr>
                             <?php foreach($feedback_list as $feedback_info){?> 
@@ -22,13 +21,8 @@
                                 <td><?php echo $feedback_info['phone']; ?></td>
                                 <td><?php echo $feedback_info['enquiry']; ?></td>
                                 <td>
-                                    <a href="<?php echo base_url().'admin/feedback/show_replies/'.$feedback_info['feedback_id']?>">
+                                    <a href="<?php echo base_url().'admin/feedback/show_feedback/'.$feedback_info['feedback_id']?>">
                                         Show
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="<?php echo base_url().'admin/feedback/create_reply/'.$feedback_info['feedback_id']?>">
-                                        Reply
                                     </a>
                                 </td>
                                 <td>

@@ -31,6 +31,8 @@ class User extends CI_Controller {
         }
         $this->data['home_page_info'] = $home_page_info;
         $this->data['menu_id'] = MENU_ID_HOME;
+        
+        $this->data['menu_submenu_list'] = $this->page_library->get_menu_submenu_list();
     }
 
     public function index()
@@ -44,8 +46,28 @@ class User extends CI_Controller {
         $this->template->load(NULL, "nonmember/index", $this->data);
     }   
     
-    public function page($submenu_id = 0)
+    
+    
+    
+    public function page($page_id = 0, $menu_id = 0)
     {
+        $page_info = $this->page_library->get_page_details($page_id);
+        if(!empty($page_info))
+        {
+            $this->data['page_info'] = $page_info;
+            $this->data['menu_id'] = $menu_id;
+            $this->data['submenu_list'] = array();
+            $this->template->load(NULL, "nonmember/page", $this->data);
+        }
+        else
+        {
+            $this->data['menu_id'] = "-2";
+            $this->template->load(NULL, "nonmember/empty_page", $this->data);
+        }        
+    }
+    
+    /*public function page($submenu_id = 0)
+    {   
         $this->data['submenu_list'] = array();
         $page_info = array();
         $page_info_array = $this->page_model->get_page_info($submenu_id)->result_array();
@@ -64,7 +86,7 @@ class User extends CI_Controller {
             $this->data['menu_id'] = "-2";
             $this->template->load(NULL, "nonmember/empty_page", $this->data);
         }
-    }
+    }*/
     
     public function menu($menu_id)
     {
@@ -101,13 +123,17 @@ class User extends CI_Controller {
         $this->form_validation->set_error_delimiters("<div style='color:red'>", '</div>');
         $this->form_validation->set_rules('name', 'Name', 'xss_clean|required');
         $this->form_validation->set_rules('email', 'Email', 'xss_clean|required');
+        $this->form_validation->set_rules('enquiry', 'Message', 'xss_clean|required');
         if ($this->input->post('submit_create_feedback')) {
             if($this->form_validation->run() == true)
             {
                 $additional_data = array(
                     'name' => $this->input->post('name'),
-                    'email' => $this->input->post('email'),
+                    'company' => $this->input->post('company'),
+                    'address' => $this->input->post('address'),
                     'phone' => $this->input->post('phone'),
+                    'email' => $this->input->post('email'),
+                    'subject' => $this->input->post('subject'),
                     'enquiry' => $this->input->post('enquiry')
                 );
                 if($this->page_model->create_feedback($additional_data))
@@ -129,9 +155,14 @@ class User extends CI_Controller {
             'name' => 'name',
             'type' => 'text'
         );
-        $this->data['email'] = array(
-            'id' => 'email',
-            'name' => 'email',
+        $this->data['company'] = array(
+            'id' => 'company',
+            'name' => 'company',
+            'type' => 'text'
+        );
+        $this->data['address'] = array(
+            'id' => 'address',
+            'name' => 'address',
             'type' => 'text'
         );
         $this->data['phone'] = array(
@@ -139,6 +170,16 @@ class User extends CI_Controller {
             'name' => 'phone',
             'type' => 'text'
         );
+        $this->data['email'] = array(
+            'id' => 'email',
+            'name' => 'email',
+            'type' => 'text'
+        );
+        $this->data['subject'] = array(
+            'id' => 'subject',
+            'name' => 'subject',
+            'type' => 'text'
+        );        
         $this->data['enquiry'] = array(
             'id' => 'enquiry',
             'name' => 'enquiry',

@@ -96,16 +96,24 @@ $(function () {
                         <div class="col-md-12"> <?php echo $message; ?> </div>
                     </div>
                     <div class="form-group">
-                        <label for="page_id" class="col-md-6 control-label requiredField">
+                        <label for="display_name" class="col-md-3 control-label requiredField">
+                            Display Name
+                        </label>
+                        <div class ="col-md-9">
+                            <?php echo form_input($display_name + array('class' => 'form-control')); ?>
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <label for="page_id" class="col-md-3 control-label requiredField">
                             Page
                         </label>
-                        <div class ="col-md-6">
+                        <div class ="col-md-9">
                             <?php echo form_dropdown('page_list', array('0'=>'Select')+$page_list, '0', 'class=form-control id=page_list'); ?>
                         </div> 
                     </div>
                     <div class="form-group">
                         <label for="picture" class="col-md-3 control-label requiredField">
-                            Add picture
+                            
                         </label>
                         <div class ="col-md-9">
                             <div class="col-md-6">
