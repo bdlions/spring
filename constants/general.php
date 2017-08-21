@@ -1,5 +1,5 @@
 <?php
-define("SITE_TITLE",                                        "Cadogan Mcqueen");
+define("SITE_TITLE",                                        "Spring");
 
 define("LOGO_TYPE_ID_HEADER",                               "1");
 define("LOGO_TYPE_ID_FOOTER",                               "2");
