@@ -63,7 +63,7 @@
 .home article {
     margin-bottom: 0px;
     font-size:14px;
-    line-height: 1.5em;
+    line-height:20px;
 }
 
 /*article {
@@ -205,9 +205,6 @@ ul.sub-menu li {
 .redish {
     color: #06383E;
 }
-.red {
-    color: #E73630;
-}
 
 
 
@@ -248,7 +245,7 @@ ul.sub-menu li {
 }
 
 .building_servey {
-    /*//background: url("../images/building_servey.png") no-repeat scroll 6px 6px transparent;*/
+    //background: url("../images/building_servey.png") no-repeat scroll 6px 6px transparent;
 }
 
 .development_legis {
@@ -676,6 +673,9 @@ table td {
 
 
 
+
+
+
 @media (min-width: 992px){
     .custom > li {
         float: right!important;
@@ -919,7 +919,7 @@ table td {
         margin-left: 5px; 
         font-size: 10px;
     }
-    
+
 }
 .carousel-inner-custom > .item > a > img, .carousel-inner-custom > .item > img{
     width: 100%;
@@ -942,10 +942,10 @@ legend {
     word-spacing: normal;
 }
 legend{
-        margin-top: -15px!important;
-    }
-    .custom-button{
-         background: #E73630;
-         border: 1px solid #E73630;
-         color: #fff;
-    }
+    margin-top: -15px!important;
+}
+.custom-button{
+    background: #E73630;
+    border: 1px solid #E73630;
+    color: #fff;
+}
