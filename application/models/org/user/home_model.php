@@ -23,11 +23,20 @@ class Home_model extends Ion_auth_model
                 ->get();
     }
     
+//    public function get_all_links()
+//    {
+//        $this->db->order_by('order', 'asc');
+//        return $this->db->select($this->tables['links'].'.id as link_id,'.$this->tables['links'].'.*')
+//                ->from($this->tables['links'])
+//                ->get();
+//    }
+    
     public function get_all_links()
     {
         $this->db->order_by('order', 'asc');
-        return $this->db->select($this->tables['links'].'.id as link_id,'.$this->tables['links'].'.*')
+        return $this->db->select($this->tables['links'].'.id as link_id,'.$this->tables['links'].'.*,'.$this->tables['submenus'].'.page_id')
                 ->from($this->tables['links'])
+                ->join($this->tables['submenus'], $this->tables['links'] . '.link=' . $this->tables['submenus'] . '.id')
                 ->get();
     }
 }

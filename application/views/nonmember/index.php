@@ -68,7 +68,13 @@
                     <img class="img-responsive" src="<?php echo base_url().'resources/images/'.$link_info['img']; ?>">
                 </div>
                 <div class="col-md-8">
-                    <a href="<?php echo base_url() . 'user/page/' . $link_info['link']; ?>" class="cursor_pointer">
+                    <a 
+                        <?php if(isset($link_info['page_id'])){ ?>
+                        href="<?php echo base_url() . 'user/page/' . $link_info['page_id']; ?>" class="cursor_pointer"
+                        <?php }else{ ?>
+                            href="#"
+                        <?php } ?>
+                    >
                         <h5><?php echo $link_info['title']; ?></h5>
                         <p><?php echo $link_info['summary']; ?></p>
                     </a>

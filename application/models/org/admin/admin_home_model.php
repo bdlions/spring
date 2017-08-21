@@ -30,8 +30,9 @@ class Admin_home_model extends Ion_auth_model
     //--------------- Homa page links module ----------------//
     public function get_all_links()
     {
-        return $this->db->select($this->tables['links'].'.id as id,'.$this->tables['links'].'.*')
+        return $this->db->select($this->tables['links'].'.id as id,'.$this->tables['links'].'.*,'.$this->tables['submenus'].'.title as submenu_title')
                 ->from($this->tables['links'])
+                ->join($this->tables['submenus'], $this->tables['links'] . '.link=' . $this->tables['submenus'] . '.id')
                 ->get();
     }
     

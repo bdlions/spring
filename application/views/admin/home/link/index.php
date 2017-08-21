@@ -18,7 +18,7 @@
                                 <th>Id</th>
                                 <th>Title</th>
                                 <th>Summary</th>
-                                <th>Link</th>
+                                <th>Submenu</th>
                                 <th>Order</th>
                                 
                                 <th style="text-align: center">Edit</th>
@@ -29,7 +29,7 @@
                                 <td><?php echo $link_info['id']; ?></td>
                                 <td><?php echo $link_info['title']; ?></td>
                                 <td><?php echo $link_info['summary']; ?></td>
-                                <td><?php echo $link_info['link']; ?></td>
+                                <td><?php echo $link_info['submenu_title']; ?></td>
                                 <td><?php echo $link_info['order']; ?></td>
                                 <td>
                                     <a href="<?php echo base_url()."admin/home/update_link/".$link_info['id'];?>">

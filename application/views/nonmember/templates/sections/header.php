@@ -23,11 +23,11 @@
                         </ul>
                     </div>
                 </div>-->
-        <div class="row">
+<!--        <div class="row">
             <div class="col-md-12">
                 <div class="float_phone"><?php echo $address_info['telephone'] ?></div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
 
