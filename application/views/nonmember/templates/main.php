@@ -14,31 +14,34 @@
         <script type="text/javascript" src="<?php echo base_url() ?>resources/js/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>resources/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>resources/js/jquery.lavalamp.min.js"></script>
-        <title><?php echo SITE_TITLE?></title>
+        <title><?php echo SITE_TITLE ?></title>
         <script type="text/javascript">
-            $(document).ready(function() {
+            $(document).ready(function () {
                 $('li.current-menu-item').first().addClass('current');
             });
-            $(function() {
+            $(function () {
                 $("ul#menu-main-menu").lavaLamp({
                     speed: 500
                 });
             });
-            $(document).ready(function() {
+            $(document).ready(function () {
                 $('.carousel').carousel({interval: 7000});
             });
         </script>
     </head>
     <body class="home">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <?php $this->load->view('nonmember/templates/sections/header'); ?>
-                    <?php echo $contents; ?>
+        <div class="wrapper">
+            <div class="container container-bg" style="background: #fff!important">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <?php $this->load->view('nonmember/templates/sections/header'); ?>
+                        <?php echo $contents; ?>
+                    </div>
                 </div>
-            </div>
-        </div>        
+            </div>  
+            <div class="push"></div>
+        </div>
         <?php $this->load->view('nonmember/templates/sections/footer'); ?>
     </body>
-        
+
 </html>

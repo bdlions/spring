@@ -1,4 +1,17 @@
-
+html, body {
+    height: 100%;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    min-height: 100%;
+    margin-bottom: 0px;
+}
+.footer,
+.push {
+    height: 0px;
+}
 .paddin_over_top_20px{
     padding-top: 20px;
 }
@@ -60,6 +73,12 @@
         padding: 1px;*/
 }
 
+.home {
+   background: #B24234;
+}
+.container-bg{
+    background: #fff;
+}
 .home article {
     margin-bottom: 0px;
     font-size:14px;
@@ -365,9 +384,7 @@ ul.sub-menu li {
     width: 100%;
 }*/
 
-.push {
-    height: 184px;
-}
+
 
 .contacts {
     /*height: 112px;*/
@@ -817,7 +834,7 @@ table td {
         color: #FFF!important;
     }
     .nav-custom .active,.nav-custom > .active > a{
-        background: #E73630!important;
+        background: #B24234!important;
     }
     .dropdown-menu-custom {
         list-style: none;
@@ -828,7 +845,7 @@ table td {
         padding: 15px;
     }
     .dropdown-menu-custom > li:hover{
-        background: #E73630;
+        background: #B24234;
         color: #FFF;
         cursor: pointer;
     }
@@ -858,19 +875,19 @@ table td {
         color: #FFF!important;
     }
     .main-menu-collapse ul li:hover{
-        background: #E73630;
+        background: #B24234;
         color: #FFF;
         cursor: pointer;
         z-index: 9999999;
     }
     .main-menu-collapse ul li{
-        padding: 2px 12px;
+        padding: 2px 4px;
     }
     .nav-custom{
         margin-left: -15px;
     }
     .nav-custom .active,.nav-custom > .active > a{
-        background: #E73630!important;
+        background: #B24234!important;
     }
     .main-menu-collapse li ul {
         padding: 0;
@@ -905,7 +922,7 @@ table td {
         padding: 14px 20px;
     }
     .main-menu-collapse li ul li:hover,.main-menu-collapse li ul li:hover a {
-        background: #E73630;
+        background: #B24234;
         color: #FFF;
         cursor: pointer;
     }
@@ -915,10 +932,7 @@ table td {
     .main-menu-collapse li ul li a {
         color: #FFF;
     }
-    .indicator{
-        margin-left: 5px; 
-        font-size: 10px;
-    }
+
 
 }
 .carousel-inner-custom > .item > a > img, .carousel-inner-custom > .item > img{
@@ -932,7 +946,7 @@ table td {
 }
 legend {
     font-size: 12px;
-    background: #E73630;
+    background: #B24234;
     border: 1px solid #CE1C17;
     color: #FFFFFF;
     font-weight: bold;
@@ -945,7 +959,24 @@ legend{
     margin-top: -15px!important;
 }
 .custom-button{
-    background: #E73630;
-    border: 1px solid #E73630;
+    background: #B24234;
+    border: 1px solid #B24234;
     color: #fff;
+}
+.indicator{
+    margin-left: 5px; 
+    font-size: 10px;
+}
+.nav-custom li ul li a{
+    font-size: 12px;
+}
+.glyphicon-home{
+    color: #E73630;
+}
+.logo{
+    height: 100px!important; 
+    width: 100px!important;
+}
+.company-name{
+    margin-top: 5px;
 }
