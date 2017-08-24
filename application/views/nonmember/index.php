@@ -5,10 +5,10 @@
 </script>
 <div class="row">
     <div class="col-md-12">
-        <div class="welcomemsg">
-<!--            <span class="black">Welcome to</span> <span class="blueish bold">Real</span> <span class="redish bold">State</span> <span class="blueish">Limited</span>-->
+<!--        <div class="welcomemsg">
+            <span class="black">Welcome to</span> <span class="blueish bold">Real</span> <span class="redish bold">State</span> <span class="blueish">Limited</span>
             <span class="black"><?php echo $home_page_info['gallery_image_text']?></span>
-        </div>
+        </div>-->
         <div id="carousel_slider" class="carousel slide slider_border" data-ride="carousel">
             <ol class="carousel-indicators">
                 <?php foreach($gallery_images as $key => $gallery_image){?>
@@ -40,7 +40,7 @@
 <div class="row">
     <div class="col-md-8">
         <article>
-            <h2><?php echo $home_page_info['title'] ?></h2>
+            <h2><?php //echo $home_page_info['title'] ?></h2>
             <p>
                 <?php echo $home_page_info['description'] ?>
             </p>

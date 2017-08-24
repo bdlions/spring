@@ -19,7 +19,7 @@
         <div class="row form-group">
             <?php foreach ($page_info['image_list'] as $image) { ?>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
-                    <img id="" class="size-full-img img-responsive" alt="img" src="<?php echo base_url() . 'resources/images/' . $image ?>" alt="Page Image"/>
+                    <a target="_blank" href="<?php echo base_url() . 'resources/images/' . $image ?>"><img id="" class="size-full-img img-responsive" alt="img" src="<?php echo base_url() . 'resources/images/' . $image ?>" alt="Page Image"/></a>
 
                 </div> 
             <?php } ?>

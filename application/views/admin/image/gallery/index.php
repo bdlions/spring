@@ -10,7 +10,7 @@
         margin-top: 20px;
     }
     .slider-size {
-        //min-height: 200px;
+        /*//min-height: 200px;*/
         background-size: 100% 100%;
         background-repeat: no-repeat;
 
