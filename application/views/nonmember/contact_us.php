@@ -29,8 +29,9 @@
         </ul>
     </div>
     <div class="col-md-6">
-        <span class="glyphicon glyphicon-globe"></span>  View our Location Map <br><br>
+        <!--<span class="glyphicon glyphicon-globe"></span>  View our Location Map <br><br>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.906876121139!2d90.397266!3d23.750700000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8975fcb0a2d%3A0x8b7ed6a5d054e9f1!2sDBL+Group!5e0!3m2!1sen!2sbd!4v1433841893748" width="100%" height="250" frameborder="0" style="border:0"></iframe>
+		-->
     </div>
 </div>
 <div class="row">
