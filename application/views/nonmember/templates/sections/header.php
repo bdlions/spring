@@ -2,7 +2,7 @@
     <div class="row paddin_over_top_20px">
         <div class="col-md-6 form-group">
             <div class="row">
-                <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                     <?php
                     foreach ($logo_list as $logo_info) {
                         if ($logo_info['type_id'] == LOGO_TYPE_ID_HEADER) {
@@ -15,7 +15,7 @@
                     }
                     ?>
                 </div>
-                <div class="col-xs-7 col-sm-8 col-md-9 col-lg-9">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
                     <h3 class="company-name">Spring Trade Ltd.</h3>
                 </div>
             </div>

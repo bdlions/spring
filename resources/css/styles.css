@@ -76,7 +76,7 @@ html, body {
 }
 
 .home {
-    background: #da0000;
+    background: #bd5e51;
 }
 .container-bg{
     background: #fff;
@@ -740,50 +740,6 @@ table td {
 
 }
 
-
-@media (min-width: 768px) and (max-width: 991px){
-    .custom > li {
-        float: right!important;
-    }  
-    .list-inline{
-        margin-left: 10px!important;
-    }
-    .float_phone{
-        color: #c68934;
-        font-size: 20px;
-        margin-top: -45px;
-        float: right!important;
-    }
-    .menu li {
-        background: url("../images/menu-devider.png") no-repeat scroll right 50% transparent;
-        float: left;
-        height: 32px;
-        list-style: none outside none;
-        margin-bottom: 20px;
-        margin-right: 14px;
-        padding-right: 18px;
-        z-index:10;
-        position:relative;
-    }
-
-    .welcomemsg {
-        background-color: #FFFFFF;
-        font-size: 22px;
-        left: 0;
-        opacity: 0.7;
-        padding: 17px 30px;
-        position: absolute;
-        top: 44px;
-        z-index: 99;
-    }
-    .center li{
-        margin-right: 15px;
-        margin-left: 30px;
-    }
-}
-
-
-
 @media (max-width: 767px){
     .custom > li {
         float: left!important;
@@ -839,25 +795,110 @@ table td {
         color: #FFF!important;
     }
     .nav-custom .active,.nav-custom > .active > a{
-        background: #da0000!important;
+        background: #bd5e51!important;
     }
     .dropdown-menu-custom {
         list-style: none;
         padding: 0;
         margin: 0;
     }
+
+
     .dropdown-menu-custom > li{
-        padding: 15px;
+        padding: 5px 5px 5px 30px;
     }
     .dropdown-menu-custom > li:hover{
-        background: #da0000;
+        background: #bd5e51;
         color: #FFF;
         cursor: pointer;
     }
     .dropdown-menu-custom > li:hover > a{
         text-decoration: none;
     }
+    .company-name{
+        margin-left: 20px;
+    }
+    .tag-line{
+        margin-left: 20px;
+    }
 }
+
+@media (min-width: 768px) and (max-width: 991px){
+    .custom > li {
+        float: right!important;
+    }  
+    .list-inline{
+        margin-left: 10px!important;
+    }
+    .float_phone{
+        color: #c68934;
+        font-size: 20px;
+        margin-top: -45px;
+        float: right!important;
+    }
+    .menu li {
+        background: url("../images/menu-devider.png") no-repeat scroll right 50% transparent;
+        float: left;
+        height: 32px;
+        list-style: none outside none;
+        margin-bottom: 20px;
+        margin-right: 14px;
+        padding-right: 18px;
+        z-index:10;
+        position:relative;
+    }
+
+    .welcomemsg {
+        background-color: #FFFFFF;
+        font-size: 22px;
+        left: 0;
+        opacity: 0.7;
+        padding: 17px 30px;
+        position: absolute;
+        top: 44px;
+        z-index: 99;
+    }
+    .center li{
+        margin-right: 15px;
+        margin-left: 30px;
+    }
+    .company-name{
+        margin-top: 32px;
+        margin-left: -75px;
+    }
+    .tag-line{
+        margin-left: 112px;
+    }
+    .main-menu-collapse li:hover ul {
+        top: 35px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .company-name{
+        margin-top: 32px;
+        margin-left: -20px;
+    }
+    .tag-line{
+        margin-left: 100px;
+    }
+    .main-menu-collapse li:hover ul {
+        top: 35px;
+    }
+}
+@media (min-width: 1200px){
+    .company-name{
+        margin-top: 32px;
+        margin-left: -35px;
+    }
+    .tag-line{
+        margin-left: 112px;
+    }
+    .main-menu-collapse li:hover ul {
+        top: 35px;
+    }
+}
+
+
 
 .btn_custom_button{
 
@@ -876,11 +917,12 @@ table td {
     .main-menu-collapse{
         background: #000099;
     }
-    .main-menu-collapse ul li a{
+    .main-menu-collapse ul li a,.main-menu-collapse ul li a:hover,.main-menu-collapse ul li a:visited,.main-menu-collapse ul li a:focus{
         color: #FFF!important;
+        text-decoration: none;
     }
     .main-menu-collapse ul li:hover{
-        background: #da0000;
+        background: #bd5e51;
         color: #FFF;
         cursor: pointer;
         z-index: 9999999;
@@ -892,7 +934,7 @@ table td {
         margin-left: -15px;
     }
     .nav-custom .active,.nav-custom > .active > a{
-        background: #da0000!important;
+        background: #bd5e51!important;
     }
     .main-menu-collapse li ul {
         padding: 0;
@@ -914,7 +956,6 @@ table td {
     }
     .main-menu-collapse li:hover ul {
         opacity: 1;
-        top: 54px;
         visibility: visible;
         -webkit-transition: all .1s ease;
         -moz-transition: all .1s ease;
@@ -924,10 +965,10 @@ table td {
     }
 
     .main-menu-collapse li ul li {
-        padding: 14px 20px;
+        padding: 6px 12px;
     }
     .main-menu-collapse li ul li:hover,.main-menu-collapse li ul li:hover a {
-        background: #da0000;
+        background: #bd5e51;
         color: #FFF;
         cursor: pointer;
     }
@@ -937,8 +978,13 @@ table td {
     .main-menu-collapse li ul li a {
         color: #FFF;
     }
-
-
+    .navbar-nav > li > a {
+        padding-top: 5px!important;
+        padding-bottom: 5px!important;
+    } 
+    .navbar {
+        min-height: 36px!important;
+    }
 }
 .carousel-inner-custom > .item > a > img, .carousel-inner-custom > .item > img{
     width: 100%;
@@ -951,7 +997,7 @@ table td {
 }
 legend {
     font-size: 12px;
-    background: #da0000;
+    background: #bd5e51;
     border: 1px solid #CE1C17;
     color: #FFFFFF;
     font-weight: bold;
@@ -964,8 +1010,8 @@ legend{
     margin-top: -15px!important;
 }
 .custom-button{
-    background: #da0000;
-    border: 1px solid #da0000;
+    background: #bd5e51;
+    border: 1px solid #bd5e51;
     color: #fff;
 }
 .indicator{
@@ -984,12 +1030,10 @@ legend{
 }
 .company-name{
     color: #fff;
-    margin-top: 32px;
 }
 .tag-line{
     color: #fff;
     font-size: 13px;
-    margin-left: 12px;
 }
 .full-opacity{
     opacity: 1;
