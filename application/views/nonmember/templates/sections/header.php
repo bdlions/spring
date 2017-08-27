@@ -16,11 +16,7 @@
                     ?>
                 </div>
                 <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                    <h3 class="company-name">Spring Trade Ltd.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="company-name">Spring Trade Ltd.</h2>
                     <h4 class="tag-line">100% Export Oriented Sweater Manufacturing Industry</h4>
                 </div>
             </div>

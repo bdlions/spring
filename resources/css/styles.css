@@ -863,11 +863,11 @@ table td {
         margin-left: 30px;
     }
     .company-name{
-        margin-top: 32px;
+        margin-top: 12px;
         margin-left: -75px;
     }
     .tag-line{
-        margin-left: 112px;
+        margin-left: -75px;
     }
     .main-menu-collapse li:hover ul {
         top: 35px;
@@ -875,11 +875,11 @@ table td {
 }
 @media (min-width: 992px) and (max-width: 1199px){
     .company-name{
-        margin-top: 32px;
+        margin-top: 12px;
         margin-left: -20px;
     }
     .tag-line{
-        margin-left: 100px;
+        margin-left: -20px;
     }
     .main-menu-collapse li:hover ul {
         top: 35px;
@@ -887,11 +887,11 @@ table td {
 }
 @media (min-width: 1200px){
     .company-name{
-        margin-top: 32px;
+        margin-top: 12px;
         margin-left: -35px;
     }
     .tag-line{
-        margin-left: 112px;
+        margin-left: -35px;
     }
     .main-menu-collapse li:hover ul {
         top: 35px;
@@ -1030,6 +1030,7 @@ legend{
 }
 .company-name{
     color: #fff;
+    font-size: 42px;
 }
 .tag-line{
     color: #fff;
@@ -1042,6 +1043,7 @@ legend{
     border: 1px solid #a5a5a5;
     border-radius: 0;
     margin-bottom: 0px;
+    margin-top: 5px;
 }
 
 /*------------ image zoom --------------*/
