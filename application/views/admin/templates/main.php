@@ -6,6 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content=""/>
         <title><?php echo SITE_TITLE?></title>
+        <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>resources/images/logo2.png">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>resources/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>resources/css/styles.css">
         <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->

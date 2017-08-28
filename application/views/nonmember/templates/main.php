@@ -9,6 +9,7 @@
         <meta name="og:title" content="buy and sales" />
         <meta name="og:description" content="soport website" />	
         <meta name="keywords" content=""/>
+        <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>resources/images/logo2.png">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>resources/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>resources/css/styles.css">
         <script type="text/javascript" src="<?php echo base_url() ?>resources/js/jquery.min.js"></script>
