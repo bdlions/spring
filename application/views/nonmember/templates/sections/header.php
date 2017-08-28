@@ -82,7 +82,7 @@
                         }
                         ?>
 
-                        <li class="<?php echo ($menu_id == MENU_ID_CONTACT_US) ? "active" : "" ?>"><a href="<?php echo base_url() . 'user/contact_us' ?>">Contact Us</a></li>
+                        <li class="<?php echo ($menu_id == MENU_ID_CONTACT_US) ? "active" : "" ?>"><a href="<?php echo base_url() . 'user/contact_us' ?>">CONTACT US</a></li>
                     </ul>
                 </div>
             </nav>
